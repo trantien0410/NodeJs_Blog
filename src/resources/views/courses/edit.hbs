@@ -1,0 +1,18 @@
+<div class="mt-4">
+    <h3>Update song everyday</h3>
+    <form class="mt-4" method="POST" action="/courses/{{course._doc._id}}?_method=PUT">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" value = "{{course._doc.name}}" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description">{{course._doc.description}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="videoID">ID</label>
+            <input type="text" class="form-control" value = "{{course._doc.videoID}}" id="videoID" name="videoID">
+        </div>
+        <button type="submit" class="btn btn-primary">Updated music</button>
+    </form>
+</div>
