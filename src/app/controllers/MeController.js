@@ -9,6 +9,13 @@ class MeController {
         .then(courses => res.render("me/stored-musics",{courses}))
         .catch(next);
     }
+
+    //[GET] /me/trashbin/musics
+    trashbinMusics(req, res, next) {
+        Course.findDeleted({})
+        .then(courses => res.render("me/trashbin-musics",{courses}))
+        .catch(next);
+    }
 }
 
 module.exports = new MeController();
