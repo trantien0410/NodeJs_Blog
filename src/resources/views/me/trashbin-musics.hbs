@@ -83,12 +83,15 @@
         // Restore btn clicked
         restoreBtn.click(function (event) {
           event.preventDefault();
-          var button = $(event.relatedTarget)
-          courseId = button.data('id');
+          //var button = $(event.relatedTarget)
+          courseId = $(this).data('id');
           
           restoreForm.action = `/courses/restore/${courseId}?_method=PATCH`;// truyền  url chứa id của từng khóa học vào action và với method PATCH
           restoreForm.submit();// và submit form .
         });
+
+
+
         {{!-- const btnsRestore = document.querySelectorAll('.btn-restore');
         btnsRestore.forEach(e => {
         e.addEventListener('click', (event) => {
