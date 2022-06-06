@@ -9,7 +9,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
-                <th scope="col" colspan="2">Created-Time</th>
+                <th scope="col" colspan="2">Deleted-Time</th>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +18,7 @@
                 <th scope="row">{{math @index '+' 1}}</th>
                 <td>{{this._doc.name}}</td>
                 <td>{{this._doc.description}}</td>
-                <td>{{this._doc.createdAt}}</td>
+                <td>{{this._doc.deletedAt}}</td>
                 <td>
                     <a href="" class="btn btn-link btn-restore">Restore</a>
                     <a href="" class="btn btn-link" data-toggle="modal" data-id="{{this._doc._id}}" data-target="#delete-course-modal">Permanently Deleted</a>
